@@ -132,7 +132,7 @@ select last_name, salary, round(salary * 1.155) "New Salary",
     round(salary * 0.155) "Increase"
 from employees;
 
--- sysdate 서버 날짜 출력
+-- sysdate 서버 날짜 출력 사용빈도 높음
 select sysdate
 from dual;
 

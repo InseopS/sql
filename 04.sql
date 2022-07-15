@@ -111,7 +111,7 @@ from dual;
 
 
 -- null
--- nvl null을 다른 값으로 교체한다.
+-- nvl null을 다른 값으로 교체한다. 사용빈도 높음
 select nvl(null, 0)
 from dual;
 
