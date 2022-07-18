@@ -111,11 +111,13 @@ from dual;
 
 
 -- null
+-- 싱글은 파라메터 null이 오면 리턴 null
+-- 그룹은 파라메터 null이 오면 무시
 -- nvl null을 다른 값으로 교체한다. 사용빈도 높음
 select nvl(null, 0)
 from dual;
 
---검사값과 타입이 교체값의 타입은 칼럼이 하나여서 같아야한다.
+-- 검사값과 타입이 교체값의 타입은 칼럼이 하나여서 같아야한다.
 select job_id, nvl(commission_pct, 0)
 from employees;
 

@@ -34,7 +34,7 @@ from dual;
 -- substr(str, a, b) str을 a 부터 b까지 잘라서 반환한다. b 생략 시 끝까지
 select substr('HelloWorld', 2, 1)
 from dual;
-select substr('HelloWorld', -3)
+select substr('HelloWorld', -1, 1)
 from dual;
 
 
@@ -56,7 +56,7 @@ from employees;
 
 -- 과제] 사원들의 이름, 월급그래프를 조회하라.
 --      그래프는 $1000 당 * 하나를 표시한다.
-select last_name, salary, rpad(' ', (salary / 1000) + 1, '*') "월급그래프"
+select last_name, rpad(' ', (salary / 1000) + 1, '*') "월급그래프"
 from employees;
 
 -- 과제] 위 그래프를 월급 기준 내림차순 정렬하라.
@@ -166,7 +166,7 @@ from dual;
 select add_months('2022/07/14', 1)
 from dual;
 -- 해당 다음 요일이 며칠인지 계산
-select next_day('2022/07/14', 5)
+select next_day('2022/07/28', 5)
 from dual;
 -- 해당 월의 마지막 날 계산
 select last_day('2022/07/14')

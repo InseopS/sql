@@ -66,7 +66,7 @@ select last_name, hire_date
 from employees
 where hire_date in ('2003/06/17', '2005/09/21');
 
--- like 일부 조건을 만족하는 모든 것을 찾는다.
+-- like 문자열 중 일부 조건을 만족하는 모든 것을 찾는다.
 select last_name
 from employees
 where last_name like 'S%';
@@ -186,6 +186,10 @@ order by department_id;
 select last_name, department_id
 from employees
 order by department_id desc;
+
+select last_name, department_id
+from employees
+order by 2 desc;
 
 select last_name, department_id dept_id
 from employees
